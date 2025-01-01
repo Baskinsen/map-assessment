@@ -1,4 +1,4 @@
-
+import { useNavigate } from "react-router-dom";
 import { quoteDetail } from "../assets/data";
 import Multiply from "../assets/multiply.png";
 import QuoteInformation from "./QuoteInformation";
@@ -6,8 +6,9 @@ import ArrowUp from '../assets/Arrowup.png'
 import TermsImg from '../assets/sign-doc-2.png'
 import QuoteItems from "./QuoteItems";
 export default function QuoteDetails() {
+    const navigate = useNavigate()
   return (
-    <div className="w-full px-10 py-2 space-y-8">
+    <div className="w-full px-5 xl:px-10 py-2 space-y-8">
       <div className="flex justify-between w-full">
         <div>
           <h1 className="text-[#000000] text-[24px] font-bold ">
@@ -18,7 +19,7 @@ export default function QuoteDetails() {
           </p>
         </div>
         <div className="flex w-[200px] gap-3 h-[2.5rem] my-auto">
-          <button className="w-full text-[#FFFFFF] text-[14px] font-bold rounded-xl bg-[#175CFF]">
+          <button className="w-full text-[#FFFFFF] text-[14px] font-bold rounded-xl bg-[#175CFF]" onClick={() => navigate('/respond')}>
             Respond
           </button>
           <button className="flex items-center justify-center gap-2 w-full text-[#FFFFFF] text-[14px] font-bold rounded-xl bg-[#D42620]">

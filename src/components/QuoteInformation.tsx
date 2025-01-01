@@ -8,7 +8,7 @@ quoteInformation: QuoteDetails['quoteInformation']
 
 export default function QuoteInformation({quoteInformation}: QuoteInformation) {
   return (
-    <div className="border-[1px] border-[#E4E7EC] rounded-xl py-5 px-10">
+    <div className="border-[1px] border-[#E4E7EC] rounded-xl py-5 px-5 xl:px-10">
       <div className="w-full flex justify-between ">
         <h2 className="text-[#1D2739] text-[20px] font-bold">
           Quote Information
@@ -19,7 +19,7 @@ export default function QuoteInformation({quoteInformation}: QuoteInformation) {
         </p>
       </div>
       <div className="flex justify-between items-start ">
-        <div className="w-full basis-[40%] flex flex-col gap-5">
+        <div className="w-full basis-[55%] flex flex-col gap-5">
           <div className="flex justify-between">
             <h3 className="text-[#555E68] text-[16px] font-medium">Title</h3>
             <p className="text-[#101928] text-[16px] font-medium">

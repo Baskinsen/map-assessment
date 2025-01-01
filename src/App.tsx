@@ -9,6 +9,7 @@ import {
 import './App.css'
 import DashboardLayout from './Layouts/DashboardLayout';
 import QuoteDetails from "./components/QuoteDetails";
+import Respond from "./components/Respond";
 
 
 const router = createBrowserRouter([
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         index: true, 
         element: <QuoteDetails/>
+      },
+      {
+        path: 'respond',
+        element: <Respond/>
       }
       
     ]

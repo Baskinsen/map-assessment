@@ -7,10 +7,10 @@ totals: QuoteDetails['totals']
 
 export default function QuoteItems({quoteItems, totals}: QuoteItemsProps ) {
   return (
-    <div className="border-[1px] border-[#E4E7EC] rounded-xl py-5 px-10 overflow-hidden">
+    <div className="border-[1px] border-[#E4E7EC] rounded-xl py-5 px-5 xl:px-10">
       <h2 className="text-[#1D2739] text-[20px] font-bold">Item(s)</h2>
-      <div className="bg-white rounded-lg border-2">
-        <table className="w-full table-auto border-collapse">
+      <div className="bg-white rounded-lg border-2 overflow-auto">
+        <table className="w-full table-auto border-collapse overflow-scroll">
           <thead>
             <tr className="bg-[#F9FAFB] text-left border-b">
               <th className="bg-[#F9FAFB] py-3 px-4 text-[12px] font-[400] flex gap-3">
@@ -45,7 +45,7 @@ export default function QuoteItems({quoteItems, totals}: QuoteItemsProps ) {
                 <td className="py-3 px-4 flex items-center gap-3">
                   <input type="checkbox" className="form-checkbox" />
                   <div className="flex gap-2">
-                    <img src={item.image} alt="" />
+                    <img src={item.image} alt="" className="h-10 w-10 my-auto"/>
                     <div>
                       <p className="font-medium text-[#101928] text-[14px] font-medium">
                         {item.name}
@@ -78,8 +78,8 @@ export default function QuoteItems({quoteItems, totals}: QuoteItemsProps ) {
       </div>
 
       {/* Totals Section */}
-      <div className="mt-4 flex translate-x-[68%]">
-        <div className="text-gray-800 text-sm font-medium">
+      <div className="mt-4 flex justify-end">
+        <div className="text-sm font-medium">
           <p className="flex justify-between gap-16">
             <span className=" text-[#344054] text-[16px] font-[400]">
               Sub Total:

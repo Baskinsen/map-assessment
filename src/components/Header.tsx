@@ -5,7 +5,7 @@ import Arrowup from '../assets/Arrowup.png'
 import { user } from "../assets/data";
 export default function Header() {
   return (
-    <header className="sticky top-0 bg-[#ffffff] flex justify-end items-center w-full py-3 px-10 border-[1px] border-[#F0F2F5]">
+    <header className="sticky z-10  top-0 bg-[#ffffff] flex justify-end items-center w-full py-3 px-10 border-[1px] border-[#F0F2F5]">
       <div className="flex items-center gap-10">
         <div className="relative w-[30dvw]">
           <input
@@ -29,7 +29,7 @@ export default function Header() {
               alt=""
               className="transform rotate-180 h-5 w-5 my-auto"
             />
-          </div>
+          </div>  
         </div>
       </div>
     </header>

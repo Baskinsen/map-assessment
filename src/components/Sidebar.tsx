@@ -12,15 +12,11 @@ import Setting from "../assets/sidebar/settings.png";
 import ArrowUp from "../assets/Arrowup.png";
 import SignOut from "../assets/sidebar/sign-out.png";
 import { user } from "../assets/data";
+import { truncateString } from "../utils";
 
 export default function Sidebar() {
   const [isProcurementOpen, setProcurementOpen] = useState(true);
 
-  const truncateEmail = (email: string, maxLength: number) => {
-    return email.length >= maxLength
-      ? email.slice(0, maxLength) + "..."
-      : email;
-  };
 
   return (
     <aside className="sticky top-0 h-screen lg:w-[30%] xl:w-[25%] bg-[#F7F9FC] px-2 py-8 flex flex-col gap-10 transition-transform duration-300">
@@ -101,7 +97,7 @@ export default function Sidebar() {
           <li className="flex text-[14px] text-[#344054] px-5 py-3  font-[400] hover:bg-[#E3EAFB] hover:font-[500] rounded-md">
             <img src={Setting} alt="" className="w-5 h-5 mr-3" /> Settings
           </li>
-          <li className="flex justify-between px-5 gap-2">
+          <li className="flex justify-between px-2 xl:px-5 gap-2">
             <div className="flex gap-2">
               <img src={user.avatar} alt="" />
               <div className="flex flex-col">
@@ -109,7 +105,7 @@ export default function Sidebar() {
                   {user.name}
                 </h3>
                 <p className="text-[#475367] text-[14px] font-[400]">
-                  {truncateEmail(user.email, 15)}
+                  {truncateString(user.email, 15)}
                 </p>
               </div>
             </div>
